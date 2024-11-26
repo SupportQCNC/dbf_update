@@ -1,0 +1,31 @@
+2024-11-26 14:00:47,506 - INFO - Début du script
+2024-11-26 14:00:47,506 - INFO - Demander à l'utilisateur de choisir les fichiers...
+2024-11-26 14:00:53,590 - INFO - Chargement du fichier DBF : C:/Users/sec/Desktop/SCRIPT_DBF_CSV/data/basecomp.dbf
+2024-11-26 14:00:54,187 - INFO - Chargement du fichier XLSX : C:/Users/sec/Desktop/SCRIPT_DBF_CSV/data/maj_stock_xl_composition.xlsx
+2024-11-26 14:00:54,402 - INFO - Nettoyage des champs vides dans le fichier XLSX...
+2024-11-26 14:00:54,403 - INFO - Vérification des colonnes entre le fichier DBF et XLSX...
+2024-11-26 14:00:54,403 - INFO - Nombre de lignes dans le fichier DBF avant fusion : 0
+2024-11-26 14:00:54,436 - INFO - Nombre de lignes dans le fichier XLSX avant fusion : 396
+2024-11-26 14:00:54,436 - INFO - Fusion des données...
+2024-11-26 14:00:54,437 - INFO - Nombre total de lignes après fusion : 396
+2024-11-26 14:00:54,441 - INFO - Fichier fusionné sauvegardé en CSV pour vérification : C:/Users/sec/Desktop/SCRIPT_DBF_CSV/data/basecomp_updated.csv
+2024-11-26 14:00:54,441 - INFO - Conversion du DataFrame final en DBF...
+2024-11-26 14:00:54,448 - ERROR - Une erreur est survenue
+Traceback (most recent call last):
+  File "c:\Users\sec\Desktop\SCRIPT_DBF_CSV\script.py", line 86, in <module>
+    dbf_table.append(tuple(row))  # Conversion en tuple avant ajout
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sec\AppData\Roaming\Python\Python312\site-packages\dbf\tables.py", line 3775, in append
+    newrecord[index] = item
+    ~~~~~~~~~^^^^^^^
+  File "C:\Users\sec\AppData\Roaming\Python\Python312\site-packages\dbf\tables.py", line 662, in __setitem__
+    self.__setattr__(self._meta.fields[name], value)
+  File "C:\Users\sec\AppData\Roaming\Python\Python312\site-packages\dbf\tables.py", line 646, in __setattr__
+    self._update_field_value(name, value)
+  File "C:\Users\sec\AppData\Roaming\Python\Python312\site-packages\dbf\tables.py", line 835, in _update_field_value
+    bytes = array('B', update(value, fielddef, self._meta.memo, self._meta.input_decoder, self._meta.encoder))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sec\AppData\Roaming\Python\Python312\site-packages\dbf\tables.py", line 1588, in update_character
+    raise ValueError("unable to coerce %r(%r) to string" % (type(string), string))
+ValueError: unable to coerce <class 'int'>(310178) to string
+2024-11-26 14:00:54,468 - INFO - Fin du script

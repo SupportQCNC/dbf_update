@@ -1,0 +1,8 @@
+2024-11-26 14:07:24,123 - INFO - Début du script
+2024-11-26 14:07:24,123 - INFO - Demander à l'utilisateur de choisir les fichiers...
+2024-11-26 14:07:26,308 - ERROR - Une erreur est survenue
+Traceback (most recent call last):
+  File "c:\Users\sec\Desktop\SCRIPT_DBF_CSV\script.py", line 30, in <module>
+    raise FileNotFoundError("Aucun fichier DBF sélectionné.")
+FileNotFoundError: Aucun fichier DBF sélectionné.
+2024-11-26 14:07:26,309 - INFO - Fin du script

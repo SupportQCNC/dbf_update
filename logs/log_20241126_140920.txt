@@ -1,0 +1,7 @@
+2024-11-26 14:09:20,602 - INFO - Début du script
+2024-11-26 14:09:20,603 - INFO - Demander à l'utilisateur de choisir les fichiers...
+2024-11-26 14:09:24,455 - ERROR - Une erreur est survenue
+Traceback (most recent call last):
+  File "c:\Users\sec\Desktop\SCRIPT_DBF_CSV\script.py", line 32, in <module>
+    print("Sélectionnez le fichier XLSX contenant les nouvelles données.")
+OSError: [Errno 22] Invalid argument
